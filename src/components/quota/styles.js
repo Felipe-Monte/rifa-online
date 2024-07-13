@@ -10,4 +10,8 @@ export const Container = styled.button`
 
   border-radius: 8px;
   border: none;
+
+  &:hover{
+    background-color: aqua;
+  }
 `;

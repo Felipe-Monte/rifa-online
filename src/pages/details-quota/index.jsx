@@ -4,6 +4,9 @@ import { Container } from "./styles";
 import { Quota } from "../../components/quota";
 
 export function DetailsQuota() {
+  const number = 50;
+  const quotas = Array.from({ length: number }, (_, index) => index + 1);
+
   return (
     <Container>
       <Header title="Detalhes da cota" />
@@ -12,9 +15,9 @@ export function DetailsQuota() {
         <p>Selecione quantas cotas você quiser!</p>
 
         <div className="container-quota">
-          <Quota number="1" />
-          <Quota number="2" />
-          <Quota number="3" />
+          {quotas.map((number) => (
+            <Quota key={number} number={number} />
+          ))}
         </div>
       </main>
     </Container>
