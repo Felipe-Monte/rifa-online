@@ -8,10 +8,11 @@ export function Home() {
     <Container>
       <Header />
       <main>
-        <h1>Home</h1>
         <QuotaCard number="1"/>
         <QuotaCard number="2"/>
         <QuotaCard number="3"/>
+        <QuotaCard number="4"/>
+        <QuotaCard number="5"/>
       </main>
     </Container>
   );
