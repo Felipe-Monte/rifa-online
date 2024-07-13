@@ -11,7 +11,7 @@ export const Container = styled.div`
     "content";
 
   > main {
-    height: calc(100% - 80px);
+    height: calc(100% - 115px);
     padding: 59px 59px;
 
     display: flex;

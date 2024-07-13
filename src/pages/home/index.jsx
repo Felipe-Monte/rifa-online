@@ -6,7 +6,7 @@ import { QuotaCard } from "../../components/quota-card";
 export function Home() {
   return (
     <Container>
-      <Header />
+      <Header title="Rifa online"/>
       <main>
         <QuotaCard number="1"/>
         <QuotaCard number="2"/>
