@@ -8,11 +8,11 @@ export function Home() {
     <Container>
       <Header title="Rifa online"/>
       <main>
-        <QuotaCard number="1"/>
-        <QuotaCard number="2"/>
-        <QuotaCard number="3"/>
-        <QuotaCard number="4"/>
-        <QuotaCard number="5"/>
+        <QuotaCard name="Iphone"/>
+        <QuotaCard name="Moto"/>
+        <QuotaCard name="Boombox"/>
+        <QuotaCard name="Carro"/>
+        <QuotaCard name="Dinheiro"/>
       </main>
     </Container>
   );

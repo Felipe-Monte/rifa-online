@@ -17,7 +17,7 @@ export const Container = styled.div`
     display: flex;
     align-items: flex-start;
     align-content: flex-start;
-    justify-content: start;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
   }

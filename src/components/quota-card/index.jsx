@@ -1,7 +1,7 @@
 import { Container } from "./styles"
 import { useNavigate } from "react-router-dom"
 
-export function QuotaCard({ number }){
+export function QuotaCard({ name }){
   const navigate = useNavigate()
 
   function handleNavigate(){
@@ -10,7 +10,7 @@ export function QuotaCard({ number }){
 
   return(
     <Container onClick={handleNavigate}>
-      <h2>Cota: {number}</h2>
+      <h2>Rifa {name}</h2>
     </Container>
   )
 }

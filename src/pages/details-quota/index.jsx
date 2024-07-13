@@ -4,7 +4,7 @@ import { Container } from "./styles";
 import { Quota } from "../../components/quota";
 
 export function DetailsQuota() {
-  const number = 50;
+  const number = 100;
   const quotas = Array.from({ length: number }, (_, index) => index + 1);
 
   return (
