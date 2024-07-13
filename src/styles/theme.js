@@ -6,12 +6,11 @@ export default {
     BACKGROUND_600: "#ff859b0d",
 
     WHITE: "#F4EDE8",
-    PURPLE: "#483D8B",
-    PURPLE_HOVER: "#4f458a",
+    GREEN: "#22C55E",
+    BLUE: "#6225E6",
 
     GRAY_100: "#999591",
     GRAY_300: "#666360",
     RED: "#ef4444",
-    GREEN: "#22c55e"
   },
 };
