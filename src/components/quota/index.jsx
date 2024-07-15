@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Container } from "./styles";
 
-export function Quota({ number, sold, setSold, onClick }) {
+export function Quota({ number, sold, setSold }) {
   const [color, setColor] = useState("");
+  const [clientName, setClientName] = useState("Disponível")
 
   function handleClick() {
     const isValid = confirm(`Deseja comprar a cota ${number}?`);
@@ -11,6 +12,7 @@ export function Quota({ number, sold, setSold, onClick }) {
     if (!color) {
       setColor("red");
       const userName = prompt("Diga seu nome na rifa:");
+      setClientName(userName)
       console.log(`${userName} Comprou a cota ${number}`);
       
       setSold((prevSold) => [...prevSold, number]);
@@ -24,7 +26,7 @@ export function Quota({ number, sold, setSold, onClick }) {
   return (
     <Container onClick={handleClick} color={color}>
       {number}
-      <p className="client-name">name</p>
+      <p className="client-name">{clientName}</p>
     </Container>
   );
 }
