@@ -17,7 +17,7 @@ export const Container = styled.div`
   > h2 {
     width: 100%;
     text-align: start;
-    padding: 0px 4px;
+    padding: 0px 2px;
   }
 `;
 export const BannerImage = styled.div`
@@ -42,7 +42,13 @@ export const Description = styled.div`
   height: 149px;
 
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .container-text{
+    height: 200px;
+    padding: 0px 2px;
+  }
 
   .container-button{
     display: flex;

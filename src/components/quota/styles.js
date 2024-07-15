@@ -8,10 +8,10 @@ export const Container = styled.button`
   align-items: center;
   justify-content: center;
 
+  background-color: ${({ color }) => color};
+
   border-radius: 8px;
   border: none;
 
-  &:hover{
-    background-color: aqua;
-  }
+  cursor: pointer;
 `;
