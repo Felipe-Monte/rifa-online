@@ -1,10 +1,10 @@
-import { createElement, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Header } from "../../components/header";
 import { Container } from "./styles";
 import { Quota } from "../../components/quota";
 
 export function DetailsQuota() {
-  const number = 50;
+  const number = 20;
   const quotas = Array.from({ length: number }, (_, index) => index + 1);
 
   const [sold, setSold] = useState([0]);
@@ -22,7 +22,7 @@ export function DetailsQuota() {
 
         <div className="container-quota">
           {quotas.map((number) => (
-            <Quota key={number} number={number} sold={sold} setSold={setSold} />
+            <Quota key={number} number={number} sold={sold} setSold={setSold}  />
           ))}
         </div>
       </main>

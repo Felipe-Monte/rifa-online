@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.button`
-  width: 70px;
+  width: 100px;
   height: 50px;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
