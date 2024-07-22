@@ -1,35 +1,25 @@
-import { useEffect, useState } from "react";
+import React from "react";
 import { Header } from "../../components/header";
 import { Container } from "./styles";
 import { Quota } from "../../components/quota";
 
 export function DetailsQuota() {
-  const number = 20;
-  const quotas = Array.from({ length: number }, (_, index) => index + 1);
+  const itemsOnArray = 11;
+  const quotas = Array.from({ length: itemsOnArray }, (_, index) => index + 1);
 
-  const [sold, setSold] = useState([]);
-
-  useEffect(() => {
-    console.log(sold);
-  }, [sold]);
+  function handleClick(event) {
+    const quota = event.target.textContent;
+    const confirm = window.confirm(`Deseja selecionar a ${quota}?`);
+  }
 
   return (
     <Container>
       <Header title="Detalhes da cota" />
+
       <main>
-        <h2>Cota 1</h2>
-        <p>Selecione quantas cotas você quiser!</p>
-
-        <div>
-          <p>Disponível: {number - sold.length}</p>
-          <p>Vendidas: {sold.length}</p>
-        </div>
-
-        <div className="container-quota">
-          {quotas.map((number) => (
-            <Quota key={number} number={number} sold={sold} setSold={setSold} />
-          ))}
-        </div>
+        {quotas.map((number, index) => (
+          <Quota key={number} index={index} onClick={handleClick} />
+        ))}
       </main>
     </Container>
   );

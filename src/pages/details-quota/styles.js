@@ -6,26 +6,13 @@ export const Container = styled.div`
 
   > main {
     width: 100%;
-    height: calc(100% - 105px);
+    height: fit-content;
     padding: 10px 59px;
 
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
     gap: 10px;
-
-    .container-quota {
-      width: 100%;
-      height: fit-content;
-
-      padding: 10px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
   }
 `;
