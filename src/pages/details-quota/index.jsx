@@ -4,11 +4,7 @@ import { Container } from "./styles";
 import { Quota } from "../../components/quota";
 
 export function DetailsQuota() {
-  const itemsOnArray = 11;
-
-  const [quotas, setQuotas] = React.useState(
-    Array.from({ length: itemsOnArray }, (_, index) => index + 1)
-  );
+  const itemsOnArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   function handleClick(event) {
     let textTarget = event.target.textContent;
@@ -18,6 +14,8 @@ export function DetailsQuota() {
 
     const addUserName = window.prompt(`Qual nome deseja colocar?`);
     if (!addUserName) return;
+
+    textTarget = "Felipe";
   }
 
   return (
@@ -25,8 +23,8 @@ export function DetailsQuota() {
       <Header title="Detalhes da cota" />
 
       <main>
-        {quotas.map((number, index) => (
-          <Quota key={number} index={index} onClick={handleClick} />
+        {itemsOnArray.map((item, index) => (
+          <Quota key={item} index={index} onClick={handleClick} />
         ))}
       </main>
     </Container>
