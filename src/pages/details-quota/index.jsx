@@ -5,11 +5,19 @@ import { Quota } from "../../components/quota";
 
 export function DetailsQuota() {
   const itemsOnArray = 11;
-  const quotas = Array.from({ length: itemsOnArray }, (_, index) => index + 1);
+
+  const [quotas, setQuotas] = React.useState(
+    Array.from({ length: itemsOnArray }, (_, index) => index + 1)
+  );
 
   function handleClick(event) {
-    const quota = event.target.textContent;
-    const confirm = window.confirm(`Deseja selecionar a ${quota}?`);
+    let textTarget = event.target.textContent;
+
+    const confirm = window.confirm(`Deseja selecionar a ${textTarget}?`);
+    if (!confirm) return;
+
+    const addUserName = window.prompt(`Qual nome deseja colocar?`);
+    if (!addUserName) return;
   }
 
   return (
